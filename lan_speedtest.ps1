@@ -12,8 +12,8 @@ function New-EmptyFile
    $file.Close()
    #Get-Item $file.Name
 }
-if ($server) $serverlist = $server
-else $serverlist = get-content $list
+if ($server) {$serverlist = $server}
+else {$serverlist = get-content $list}
 foreach ($server in $serverlist) {
 	$Source = pwd
 
